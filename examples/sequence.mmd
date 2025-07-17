@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant U as User
+    participant A as App
+    participant D as Database
+    
+    U->>A: Login Request
+    A->>D: Query User
+    D-->>A: User Data
+    A-->>U: Login Success
+    
+    U->>A: Get Data
+    A->>D: Query Data
+    D-->>A: Return Data
+    A-->>U: Display Data 
